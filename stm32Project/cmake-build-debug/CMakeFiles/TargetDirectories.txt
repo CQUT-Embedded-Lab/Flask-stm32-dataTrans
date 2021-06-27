@@ -1,0 +1,3 @@
+C:/Users/Cause_Hhc/Desktop/poseWorkspace/Flask-stm32-dataTrans/stm32Project/cmake-build-debug/CMakeFiles/stm32Project.elf.dir
+C:/Users/Cause_Hhc/Desktop/poseWorkspace/Flask-stm32-dataTrans/stm32Project/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Cause_Hhc/Desktop/poseWorkspace/Flask-stm32-dataTrans/stm32Project/cmake-build-debug/CMakeFiles/rebuild_cache.dir

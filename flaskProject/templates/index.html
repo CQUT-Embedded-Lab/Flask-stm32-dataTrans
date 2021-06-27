@@ -1,0 +1,63 @@
+<html lang="en">
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <label for="ipaddr"></label><input type="text" id="ipaddr" name="ipaddr" placeholder="ip_addr" value="192.168.2.246">
+    <button onclick="connect()">连接</button>
+    <button onclick="deconnect()">断开</button>
+    <br>
+    <label for="msg"></label><input type="text" id="msg" name="msg" placeholder="消息">
+    <button onclick="send_msg()">发送</button>
+    <button onclick="send_on()">ON</button>
+    <button onclick="send_off()">OFF</button>
+</html>
+<script>
+    function connect() {
+        $.ajax({
+            url: "connect",
+            type: "POST",
+            data: { "ipaddr": $("#ipaddr").val()},
+            success: function (result) {
+                alert(result.message)
+            }
+        });
+    }
+    function deconnect() {
+        $.ajax({
+            url: "deconnect",
+            type: "POST",
+            data: { "ipaddr": $("#ipaddr").val()},
+            success: function (result) {
+                alert(result.message)
+            }
+        });
+    }
+    function send_msg() {
+        $.ajax({
+            url: "send_msg",
+            type: "POST",
+            data: { "msg": $("#msg").val()},
+            success: function (result) {
+                console.log(result.message)
+            }
+        });
+    }
+    function send_on() {
+        $.ajax({
+            url: "send_on",
+            type: "POST",
+            data: { "data": "ON"},
+            success: function (result) {
+                console.log(result.message)
+            }
+        });
+    }
+    function send_off() {
+        $.ajax({
+            url: "send_off",
+            type: "POST",
+            data: { "data": "OFF"},
+            success: function (result) {
+                console.log(result.message)
+            }
+        });
+    }
+</script>
